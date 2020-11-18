@@ -6,7 +6,7 @@ int main()
 {
     // range supports any value_type that implements operator+(const difference_type&)
     // and operator<(const value_type&) and supports value_type{0}
-    // Examples: all integer and floating-point types, iterators
+    // Examples: all integer and floating-point types, pointers, iterators
 
     // Usage with explicit step
     std::vector<int> vec{1, 7, 6, 3, 4};
