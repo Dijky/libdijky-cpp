@@ -20,7 +20,7 @@ int main()
     // The step type can not be deduced and must be specified
     // Supports any difference_type that supports difference_type{1}
     std::cout << "Implicit step:" << std::endl;
-    for (int x : range<int, int>(0, 5))
+    for (auto x : range<int, int>(0, 5))
     {
         std::cout << x << std::endl;
     }
