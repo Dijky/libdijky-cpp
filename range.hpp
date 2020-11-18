@@ -22,7 +22,7 @@ public:
             return *this;
         }
 
-        bool operator<(const iterator& rhs) const { return range_.step_ < 0 ? rhs.value_ < value_ : value_ < rhs.value_; }
+        bool operator<(const iterator& rhs) const { return range_.step_ < difference_type{0} ? rhs.value_ < value_ : value_ < rhs.value_; }
         bool operator==(const iterator& rhs) const { return this == &rhs || (range_ == rhs.range_ && value_ == rhs.value_); }
         bool operator!=(const iterator& rhs) const { return !this->operator==(rhs); }
 
