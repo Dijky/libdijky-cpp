@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
-#include "range.hpp"
+#include "include/dijky/range.hpp"
+
+using dijky::range;
 
 int main()
 {

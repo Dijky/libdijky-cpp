@@ -1,3 +1,11 @@
+#pragma once
+
+#ifndef DIJKY_RANGE_H_
+#define DIJKY_RANGE_H_
+
+namespace dijky
+{
+
 template<typename T, typename DiffT>
 class range
 {
@@ -53,3 +61,7 @@ private:
     value_type stop_ = value_type{0};
     difference_type step_ = difference_type{0};
 };
+
+}
+
+#endif // DIJKY_RANGE_H_
