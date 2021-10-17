@@ -48,6 +48,9 @@ public:
     range(const value_type& start, const value_type& stop, const difference_type& step) : start_{start}, stop_{stop}, step_{step} {}
     range(const value_type& start, const value_type& stop) : range(start, stop, difference_type{1}) {}
     range(const value_type& stop) : range(value_type{0}, stop) {}
+	
+	template<typename NewDiffT>
+	range<value_type, NewDiffT> step(const NewDiffT& step) const { return range(start_, stop_, step); }
 
     bool operator==(const range& rhs) const  {
         return this == &rhs || (start_ == rhs.start_ && stop_ == rhs.stop_ && step_ == rhs.step_);
