@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "include/dijky/range.hpp"
+#include "../include/dijky/range.hpp"
 
 using dijky::range;
 
