@@ -23,6 +23,10 @@ public:
         const value_type& value() const { return value_; }
         const value_type& operator*() const { return value(); }
 
+        void reset() {
+            value_ = range_.start_;
+        }
+
         iterator& operator++() {
             auto next = value_ + range_.step_;
             bool in_range = (range_.step_ < difference_type{0}) ? (range_.stop_ < next) : (next < range_.stop_);
